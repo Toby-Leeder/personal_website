@@ -1,0 +1,44 @@
+title: "Toby Leeder"
+name: "Toby Leeder"
+description: "Personal portfolio — software engineering projects, blog, and résumé."
+url: "https://tobyleeder.com"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: false
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: single
+      author_profile: true
+      toc: true
+
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
