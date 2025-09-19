@@ -14,25 +14,25 @@ header:
 intro:
   - excerpt: "I build things across data, backend, and creative tech. Here are a few highlights."
 feature_row:
-  - image_path: /assets/images/project-demo.gif
-    alt: "Project 1"
-    title: "Featured Project A"
-    excerpt: "One‑liner impact statement."
-    url: "/projects/example-project/"
+  - image_path: /assets/images/cyph-hero.jpg
+    alt: "CYPH"
+    title: "Can You Picture Heaven"
+    excerpt: "Creative tech exploring media and interaction."
+    url: "/projects/can-you-picture-heaven/"
     btn_label: "Read more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/project-demo.gif
-    alt: "Project 2"
-    title: "Featured Project B"
-    excerpt: "One‑liner impact statement."
-    url: "/projects/example-project/"
+  - image_path: /assets/images/binarygames-hero.gif
+    alt: "BinaryGames"
+    title: "BinaryGames"
+    excerpt: "React + Express full‑stack project with auth and CI."
+    url: "/projects/binarygames/"
     btn_label: "Read more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/project-demo.gif
-    alt: "Project 3"
-    title: "Featured Project C"
-    excerpt: "One‑liner impact statement."
-    url: "/projects/example-project/"
+  - image_path: /assets/images/classroom-jukebox-hero.gif
+    alt: "Classroom Jukebox"
+    title: "Classroom Jukebox"
+    excerpt: "Collaborative queue with moderation and voting."
+    url: "/projects/classroom-jukebox/"
     btn_label: "Read more"
     btn_class: "btn--primary"
 ---

@@ -7,7 +7,6 @@ role: "Your role (e.g., solo dev, backend lead)"
 links:
 - label: "Code"
 url: "https://github.com/Toby-Leeder/repo"
-- label: "Demo"
 url: "https://example.com"
 header:
 overlay_color: "#000"
