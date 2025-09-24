@@ -14,18 +14,19 @@ header:
 intro:
   - excerpt: "I build things across data, backend, and creative tech. Here are a few highlights."
 feature_row:
-  - image_path: /assets/images/cyph-hero.jpg
+  - image_path: /assets/images/cyph-hero.png
     alt: "CYPH"
     title: "Can You Picture Heaven"
-    excerpt: "Creative tech exploring media and interaction."
-    url: "/projects/can-you-picture-heaven/"
+    excerpt: "Creative game development."
+    url: "/projects/cyph/"
     btn_label: "Read more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/binarygames-hero.gif
-    alt: "BinaryGames"
-    title: "BinaryGames"
-    excerpt: "React + Express full‑stack project with auth and CI."
-    url: "/projects/binarygames/"
+  - image_path: /assets/images/LeedingTomorrow.png
+    alt: "LeedingTomorrow"
+    title: "LeedingTomorrow"
+    excerpt: "Professional website development."
+    url: "/projects/leedingtomorrow/"
+    link: https://www.leedingtomorrow.com/
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: /assets/images/classroom-jukebox-hero.gif

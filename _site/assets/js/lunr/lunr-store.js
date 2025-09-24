@@ -5,14 +5,8 @@ var store = [{
         "url": "/2025/09/14/hello-world/",
         "teaser": null
       },{
-        "title": "Project Title",
-        "excerpt":"Problem  What problem were you solving? Who for?   Approach  What you built, how you built it, architecture, key decisions.   Results  Impact, metrics if available, what changed.   Notes  Challenges, tradeoffs, and what you’d do next.  ","categories": [],
-        "tags": [],
-        "url": "/projects/defaults/",
-        "teaser": null
-      },{
         "title": "Can You Picture Heaven (CYPH)",
-        "excerpt":"Concept A brief, audience‑friendly explanation of the project’s goal—what the experience is and why it’s interesting. What I Built Your specific contributions (features, components, scripts, data processing). Any challenges (e.g., media pipeline, performance, file handling, UX trade‑offs). Notes Architecture/stack choices and why they fit the problem. How collaboration, testing, or...","categories": [],
+        "excerpt":"Concept A game with fun and happy vibes with serious undertones about getting over trauma, finding forgiveness, and becoming a better person. Setting: Purgatory, a place between heaven and earth Goal: Help the other 3 find their happiness and ascend to heaven Story: Completing a character quest unlocks a piece...","categories": [],
         "tags": [],
         "url": "/projects/cyph/",
         "teaser": null
@@ -29,9 +23,9 @@ var store = [{
         "url": "/projects/classroomjukebox/",
         "teaser": null
       },{
-        "title": null,
-        "excerpt":"Problem  Describe the user/job‑to‑be‑done.   Approach  Summarize architecture and key choices.   Results  Add any numbers, screenshots, or takeaways.  ","categories": [],
-        "tags": null,
-        "url": "/projects/example-project/",
+        "title": "Leeding Tomorrow – Website Design & Build",
+        "excerpt":"Concept Leeding Tomorrow is a professional site for educator Ariella Leeder, built to showcase her offerings in College Coaching and Future Problem Solving (FPS). The website provides program summaries, personal background, and clear scheduling/contact CTAs for prospective students and families. Target audience: Students and parents seeking coaching or FPS enrichment....","categories": [],
+        "tags": [],
+        "url": "/projects/leedingtomorrow/",
         "teaser": null
       }]

@@ -1,0 +1,34 @@
+
+@import "minimal-mistakes";
+
+/* This creates the frosted glass pane */
+.hero-blur .page__hero--overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* The blur effect for the background */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+
+  /* Optional: a dark tint for readability */
+  background-color: rgba(25, 25, 25, 0.3);
+
+  z-index: 0;
+}
+
+/* This ensures the text stays sharp and on top */
+.page__hero--overlay .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scopes these color changes to pages with the "leeding-hero" class */
+.leeding-hero .page__hero--overlay .page__title,
+.leeding-hero .page__hero--overlay .page__lead {
+  color: #f8f8f8 !important; /* A bright, slightly off-white color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Optional: Adds a subtle shadow for readability */
+}
