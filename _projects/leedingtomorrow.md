@@ -7,10 +7,6 @@ role: "Designer & Developer"
 links:
   - label: "Live Site"
     url: "https://www.leedingtomorrow.com/"
-  - label: "Email Contact"
-    url: "mailto:californiafps@gmail.com"
-  - label: "Schedule Consultation"
-    url: "https://calendly.com/ariella-fps"
 header:
   overlay_color: "#000"
   overlay_filter: 0.5
@@ -26,7 +22,7 @@ Leeding Tomorrow is a professional site for educator **Ariella Leeder**, built t
 - **Tone:** Warm, knowledgeable, and trustworthy.
 
 ## What I Built
-I designed and built the site from scratch, including layout, styling, content polish, and conversion-focused UX.
+I designed and built the site, including layout, styling, content polish, and conversion-focused UX.
 
 ### Pages:
 - **Homepage:** Overview of FPS & College Coaching, with educator intro and direct CTAs.

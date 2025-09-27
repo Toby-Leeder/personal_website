@@ -7,6 +7,9 @@ role: "Contributor / Developer"
 links:
   - label: "Repository"
     url: "https://github.com/lefortune/CYPH"
+  - label: "Itch Link"
+    url: "https://lefortune.itch.io/cyph"
+
   # - label: "Live Demo"
   #   url: "https://example.com"     # optional
 header:

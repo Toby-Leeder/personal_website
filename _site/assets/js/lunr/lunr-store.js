@@ -18,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Classroom Jukebox",
-        "excerpt":"Problem Students want a fair, moderated way to suggest and vote on songs in shared spaces without chaos or monopolization. Approach Queue logic: submit → dedupe → vote → play; teacher‑moderated controls. Auth/integration: OAuth / API hooks (e.g., Spotify/YouTube if used). Frontend: React components for queue view, voting, moderation panel....","categories": [],
+        "excerpt":"Problem Teachers often play music in class, but it’s hard for students to provide input on what songs to play! Approach Auth/integration: OAuth / API hooks for direct Spotify Connections Frontend: React components for queue view, searching, moderation panel. Backend: REST endpoints for track search, enqueue, dequeue, and admin actions....","categories": [],
         "tags": [],
         "url": "/projects/classroomjukebox/",
         "teaser": null

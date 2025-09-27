@@ -21,19 +21,19 @@ feature_row:
     url: "/projects/cyph/"
     btn_label: "Read more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/LeedingTomorrow.png
+  - image_path: /assets/images/leedingtomorrow-front.png
     alt: "LeedingTomorrow"
     title: "LeedingTomorrow"
-    excerpt: "Professional website development."
+    excerpt: "Professional website development for educator."
     url: "/projects/leedingtomorrow/"
     link: https://www.leedingtomorrow.com/
     btn_label: "Read more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/classroom-jukebox-hero.gif
+  - image_path: /assets/images/classroomjukebox.png
     alt: "Classroom Jukebox"
     title: "Classroom Jukebox"
-    excerpt: "Collaborative queue with moderation and voting."
-    url: "/projects/classroom-jukebox/"
+    excerpt: "Collaborative queue for classroom music."
+    url: "/projects/classroomjukebox/"
     btn_label: "Read more"
     btn_class: "btn--primary"
 ---

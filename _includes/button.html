@@ -1,0 +1,5 @@
+<a href="{{ include.link }}"
+   class="btn{% if include.class %} {{ include.class }}{% endif %}"
+   {% if include.new_tab %}target="_blank" rel="noopener"{% endif %}>
+  {{ include.text }}
+</a>
