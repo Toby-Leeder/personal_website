@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-09-29T21:45:10-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Toby Leeder</title><subtitle>Personal portfolio — software engineering projects, blog, and résumé.</subtitle><entry><title type="html">Phaser Game</title><link href="http://localhost:4000/2025/09/29/phaser-game/" rel="alternate" type="text/html" title="Phaser Game" /><published>2025-09-29T00:00:00-07:00</published><updated>2025-09-29T00:00:00-07:00</updated><id>http://localhost:4000/2025/09/29/phaser-game</id><content type="html" xml:base="http://localhost:4000/2025/09/29/phaser-game/"><![CDATA[<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+---
+layout: single
+title: "Phaser Game"
+excerpt: "This was the game I created over the summer in High School to learn how to use Phaser!"
+---
 
+
+
+<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
 <style type="text/css">
     body {
         margin: 0;
@@ -45,7 +52,7 @@
     // preload function, necessary for phaser. Loads any assets
     function preload ()
     {
-        this.load.setPath('/assets/images/')
+        this.load.setPath('{{site.baseurl}}/assets/images/')
         this.load.image('sky', 'sky.png');
         this.load.image('ground', 'platform.png');
         this.load.image('star', 'star.png');
@@ -487,164 +494,4 @@
             e = false;
         }
     })
-</script>]]></content><author><name></name></author><summary type="html"><![CDATA[This was the game I created over the summer in High School to learn how to use Phaser!]]></summary></entry><entry><title type="html">AWS Learnings</title><link href="http://localhost:4000/2025/09/29/websocket_learnings/" rel="alternate" type="text/html" title="AWS Learnings" /><published>2025-09-29T00:00:00-07:00</published><updated>2025-09-29T00:00:00-07:00</updated><id>http://localhost:4000/2025/09/29/websocket_learnings</id><content type="html" xml:base="http://localhost:4000/2025/09/29/websocket_learnings/"><![CDATA[<table>
-  <tbody>
-    <tr>
-      <td>This post was created in high school to document my self-guided learnings in AWS! I later implemented these processes into my project (as I outlined in my plans).</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="service-descriptions">Service Descriptions:</h1>
-
-<h2 id="lambda">Lambda</h2>
-
-<h3 id="what-is-lambda">What is lambda?</h3>
-
-<p>AWS Lambda is essentially a service that allows you to create and run functions for your backend. It basically just runs code when called. Thats kinda the simple way to put it. The code is run on Amazon’s computer infrastructure, and it automatically scales with use.</p>
-
-<h3 id="how-will-i-use-lambda">How will I use Lambda?</h3>
-
-<p>I’m planning on using Lambda to communicate between computers. I will either use a dynamo table to keep track of all of the players current positions or just send periodic updates to all of the players. The benefit of using Lambdas is that a call to adds something to a database can trigger other clients to pull from the database. That’s why this alternative is better than what I’ve done in previous projects, as I just used continuous api calls to check if it had changed.</p>
-
-<h2 id="api-gateway">API Gateway</h2>
-
-<h3 id="what-is-api-gateway">What is API Gateway?</h3>
-
-<p>API Gateway is another AWS service that can be used in combination with many other services. It creates RESTful APIs that are HTTP based and enable stateless client-server communication. This is essentially a way of managing concurrent API calls.</p>
-
-<h3 id="how-will-i-use-api-gateway">How will I use API Gateway&gt;</h3>
-
-<p>I will be using it with AWS Lambda, though it can be used with many other AWS services. It will essentially act as a manager for my connecting and disconecting from the serverless websocket.</p>
-
-<h1 id="first-steps">First Steps</h1>
-
-<p>The first thing I wanted to do was create a functional websocket on AWS using the method I described above. To do this I followed a tutorial. <a href="https://www.youtube.com/watch?v=FIrzkt7kH80">Here</a> is the video I used, it is very concise and well made. For anyone watching the video, he left out one important thing. Your send message lambda function must also be given special permissions like the connect function, specifically it needs the “AmazonAPIGatwayInvokeFullAccess” policy.</p>
-
-<h2 id="the-process">The Process</h2>
-
-<ol>
-  <li>The first thing I did was create the lambda functions. This part was not shown in the video, so I skipped ahead to where he showed the functions and I just copied them down. I used python 3.9 because that’s what he used. Then I went back to the beginning of the video.</li>
-  <li>The next thing I did was follow his guide pretty much exactly. If you would like to see how to do it, I would just recomend watching the guide (and leaving a like!).</li>
-</ol>
-
-<h2 id="what-went-wrong">What went wrong</h2>
-<ul>
-  <li>Permissions bug: I didn’t know initially why I was getting the bug, but I read the error message and it said something about permission being denied. The video had already told us to add a permission to our connection lambda function, so I just assumed that might be the issue and added every permission related to APIGateways and Lambdas. After that I systematically removed permissions until I found the one permission that fixed my errors. I actually just got really lucky and my first guess was the correct one, so I didn’t really have to test that much. That fixed that error.</li>
-  <li>Testing: I was trying to test it with my friend on seperate computers and initially it worked fine. However when I tried to join it appeared to break for some reason. The only way to find someones connectionID for now was to go to the CloudWatch logs and find it in the statement that got printed. However when I looked, I didn’t see a new connection. Then I checked the event my friend had logged and my connection outputs were in that same event. I wasn’t expecting this, I thought it would create a seperate event for each instance it’s called, but apparently it does not.</li>
-</ul>
-
-<h3 id="calling-a-lambda-from-a-lambda">Calling a Lambda from a Lambda</h3>
-
-<p>This was something I needed to do after running into an error. Essentially, I wanted the connectionId to be sent back to the client as soon as they connect to the websocket. However when I tried to add this functionality into the connection lambda, it tried to send it before it had finished connecting and it didn’t work the way I wanted it to. My solution was to just call a second lambda from within the first lambda. I found another <a href="https://www.youtube.com/watch?v=Lf98s3NczBE">youtube video</a> about it and followed his step by step, including creating my own invoke lambda IAM role to give the lambda the right permissions. It worked first try.</p>
-
-<p><img src="/images/LambdaFlowchart.jpg" alt="" /></p>]]></content><author><name></name></author><summary type="html"><![CDATA[This post was created in high school to document my self-guided learnings in AWS!]]></summary></entry><entry><title type="html">Ruby Guide</title><link href="http://localhost:4000/2025/09/14/ruby-guide/" rel="alternate" type="text/html" title="Ruby Guide" /><published>2025-09-14T00:00:00-07:00</published><updated>2025-09-14T00:00:00-07:00</updated><id>http://localhost:4000/2025/09/14/ruby-guide</id><content type="html" xml:base="http://localhost:4000/2025/09/14/ruby-guide/"><![CDATA[<table>
-  <tbody>
-    <tr>
-      <td>This guide was created in high school to support my fellow Computer Science Students!</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="introduction">Introduction</h1>
-<p>Essentially the issue to my understanding is mac has a base ruby version which isn’t compatiable for our uses. This isn’t bad, but the problem arises when you want to switch to a different version of ruby. You need to change the path which your system uses for ruby. The way I did this was using Chruby. Chruby is a ruby manager which allows you to change which version of ruby you want. It’s kind of overkill for our purposes, but it was the only thing I could get to work.</p>
-
-<p>There are multiple prominent ruby managers and all of them will probably work. This is how to set up Chruby, but if you would like to look on your own for rvm or rbenv or something else entirely then you definitely can. Chruby is the simplest to use and understand.</p>
-
-<h1 id="what-do-you-do">What do you do</h1>
-
-<h2 id="step-1-install-brew-and-upgrade-brew">Step 1: Install brew and upgrade brew</h2>
-<p>First you need to install brew. Homebrew (brew) is a package manager which basically means it helps you install anything and everything that you need. If you don’t have it installed go to this <a href="https://brew.sh/">link</a> and run the command under install.</p>
-
-<p>If you have brew then you need to make sure your brew is up to date. Run the following:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew outdated <span class="c">#This command checks if your packages are outdated. If any of your packages are outdated, run the next two commands.</span>
-<span class="nv">$ </span>brew update 
-<span class="nv">$ </span>brew upgrade <span class="c">#These upgrade all of your brew dependencies</span>
-</code></pre></div></div>
-<p>Restart your terminal (close and reopen)</p>
-<h2 id="step-2-install-ruby-manager-and-installer">Step 2: Install ruby manager and installer</h2>
-<p>Now you can actually install the ruby manager and installer. Run the follwing:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>chruby ruby-install
-</code></pre></div></div>
-
-<h2 id="step-3-install-ruby">Step 3: Install ruby</h2>
-<p>Install whatever version of ruby you want. For this project you should use 2.7.7. Run the following:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby-install 2.7.7
-</code></pre></div></div>
-
-<p>If it fails with it could be because:</p>
-<ul>
-  <li>Something is wrong with your development setup</li>
-  <li>You tried to install Ruby even though Homebrew reported warnings/errors</li>
-</ul>
-
-<p>Read the error message and try to fix it. If you can’t send a message on slack and mention Toby and I can look at it.</p>
-
-<h2 id="step-4-cd-into-your-directory">Step 4: cd into your directory</h2>
-<p>You should know how to do this. cd into whatever directory has the local server you want to run. This will probably be the repository that you copied from Mr. Mortensen.</p>
-
-<h2 id="step-5-configure-your-shell">Step 5: Configure your shell</h2>
-<p>My understanding of this is right now your computer wants to use the built in ruby version so we need to change it so that it uses the correct path. to do that run these three commands (don’t worry when it doesn’t say anything after you run the command, nothing is supposed to happen in terminal):</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">". </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/chruby.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">". </span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/opt/chruby/share/chruby/auto.sh"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"chruby ruby-2.7.7"</span> <span class="o">&gt;&gt;</span> ~/.zshrc
-</code></pre></div></div>
-
-<p>If you get an error saying that the file path can’t be found then restart from upgrading your homebrew. If you get any other error you could also try that or again put it on slack.</p>
-
-<h2 id="step-6-check-if-it-worked">Step 6: Check if it worked</h2>
-<p>You should be using the correct ruby version now. Inside of the directory that you used cd to enter earlier run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-v</span>
-</code></pre></div></div>
-<p>If it says 2.7.7 then it worked and you can move on.</p>
-
-<h3 id="if-it-doesnt-say-277-run">If it doesn’t say 2.7.7 run:</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>chruby 2.7.7
-</code></pre></div></div>
-
-<h3 id="if-that-says-chruby-not-found-or-something-along-those-lines-then-run">If that says chruby not found or something along those lines then run:</h3>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"source ~/.bashrc"</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
-</code></pre></div></div>
-
-<p>Then restart the terminal and run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>chruby 2.7.7 
-</code></pre></div></div>
-
-<p>If the error persists run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">.</span> /usr/local/opt/chruby/share/chruby/chruby.sh
-<span class="nv">$ </span><span class="nb">.</span> ~/.bashrc
-</code></pre></div></div>
-
-<p>Then restart the terminal and run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>chruby 2.7.7 
-</code></pre></div></div>
-
-<p>If you get a different error (NOT the chruby not found error) or the error still doesn’t go away try restarting from the beginning or send it on slack.</p>
-
-<h2 id="step-7-check-your-gemfile">Step 7: Check your Gemfile</h2>
-<p>Your gemfile is a file in the root of your project that you copied from Mr. Mortensen. Open it in vscode and look for it and check if it looks like this:</p>
-<pre><code class="language-gem">source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
-</code></pre>
-<p>Delete anything extra that you have.</p>
-<h2 id="step-8-install-jekyll-if-you-havent-already">Step 8: Install Jekyll if you haven’t already</h2>
-<p>I didn’t need to do this but some of you might. It doesn’t hurt to run it anyway. Run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem insall jekyll
-</code></pre></div></div>
-<h2 id="step-9-install-bundler-if-you-havent-already">Step 9: Install bundler if you haven’t already</h2>
-<p>These instructions are also given on the bundler website. Run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">install</span>
-<span class="nv">$ </span>git add Gemfile Gemfile.lock
-</code></pre></div></div>
-
-<h2 id="step-10-run-your-server">Step 10: Run your server</h2>
-<p>Now you should be ready to run your server. Run:</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
-<p>It will take a very long time the first time you run it.</p>
-
-<h2 id="persisting-errors">Persisting errors</h2>
-<p>If you try to run your server and you still get any errors, the first thing you should do is check that you’re using the correct ruby version in the correct directory (ruby -v) If you are then try all of these steps again from the beginning. If you still are getting errors send a message on slack and I can try to help you.</p>
-
-<p>In general however it is a good skill to be able to figure out some of the errors you get on your own. Read the error message, do what it says if there is a quick fix. Google error messages try to work through stuff if you think you’ll be able to.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[This guide was created in high school to support my fellow Computer Science Students!]]></summary></entry></feed>
+</script>

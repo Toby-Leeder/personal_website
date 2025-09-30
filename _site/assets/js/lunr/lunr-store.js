@@ -1,8 +1,20 @@
 var store = [{
-        "title": "Hello, World",
-        "excerpt":"This is a starter post. Replace or delete.  ","categories": [],
+        "title": "Ruby Guide",
+        "excerpt":"This guide was created in high school to support my fellow Computer Science Students! Introduction Essentially the issue to my understanding is mac has a base ruby version which isn’t compatiable for our uses. This isn’t bad, but the problem arises when you want to switch to a different version...","categories": [],
         "tags": [],
-        "url": "/2025/09/14/hello-world/",
+        "url": "/2025/09/14/ruby-guide/",
+        "teaser": null
+      },{
+        "title": "Phaser Game",
+        "excerpt":"      ","categories": [],
+        "tags": [],
+        "url": "/2025/09/29/phaser-game/",
+        "teaser": null
+      },{
+        "title": "AWS Learnings",
+        "excerpt":"This post was created in high school to document my self-guided learnings in AWS! I later implemented these processes into my project (as I outlined in my plans). Service Descriptions: Lambda What is lambda? AWS Lambda is essentially a service that allows you to create and run functions for your...","categories": [],
+        "tags": [],
+        "url": "/2025/09/29/websocket_learnings/",
         "teaser": null
       },{
         "title": "Can You Picture Heaven (CYPH)",
