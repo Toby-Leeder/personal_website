@@ -10,6 +10,8 @@ links:
     url: "https://github.com/aidenhuynh/cj_frontend"
   - label: "Backend Repository"
     url: "https://github.com/aidenhuynh/cj_backend"
+  - label: "Scrum Board"
+    url: "https://github.com/users/aidenhuynh/projects/4"
 
   # - label: "Live Demo"
   #   url: "https://example.com"   # optional if there’s a hosted instance
