@@ -6,7 +6,7 @@ permalink: /reseller/
 
 <style>
   .announcement-bar {
-    background-color: #eaddff; /* Soft pastel purple */
+    background-color: #eaddff;
     color: #4f378a;
     text-align: center;
     padding: 10px;
@@ -63,10 +63,10 @@ permalink: /reseller/
     margin-bottom: 30px;
   }
   .buy-btn {
-    background-color: #a8c7fa; /* Soft pastel blue */
+    background-color: #a8c7fa; 
     color: #062e6f;
     border: none;
-    padding: 25px;
+    padding: 25px 18px; /* Taller button from your previous request! */
     font-size: 1.1em;
     border-radius: 30px;
     cursor: pointer;
@@ -98,6 +98,15 @@ permalink: /reseller/
     padding: 15px;
     border-radius: 12px;
   }
+  
+  /* NEW: The Redacted Text Style */
+  .redacted {
+    background-color: #222; /* Very dark gray/black */
+    color: #222; /* Matches the background so the text is invisible */
+    padding: 0 4px; /* Gives the black box a little bit of breathing room */
+    border-radius: 3px; /* Slightly rounds the harsh corners of the box */
+    user-select: none; /* Prevents people from highlighting it to reveal the text underneath */
+  }
 </style>
 
 <div class="announcement-bar">
@@ -106,12 +115,13 @@ permalink: /reseller/
 
 <div class="container">
   <div class="image-gallery">
-    <img src="../assets/images/fuggler.jpg" alt="The (BLEEPED)" class="product-image">
+    <img src="../assets/images/IMG_0251.jpg" alt="The (BLEEPED)" class="product-image">
   </div>
   
   <div class="product-info">
     <div class="brand">Zuru / Series 6</div>
-    <h1 class="title">The (BLEEPED)</h1>
+    
+    <h1 class="title">The <span class="redacted">BLEEPED</span></h1>
     <div class="price">$100.00</div>
     
     <a href="/checkout/" class="buy-btn">Add to Cart - Buy Now</a>

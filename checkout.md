@@ -81,12 +81,20 @@ permalink: /checkout/
     display: inline-block;
     margin-top: 10px;
   }
+    .redacted {
+    background-color: #222; /* Very dark gray/black */
+    color: #222; /* Matches the background so the text is invisible */
+    padding: 0 4px; /* Gives the black box a little bit of breathing room */
+    border-radius: 3px; /* Slightly rounds the harsh corners of the box */
+    user-select: none; /* Prevents people from highlighting it to reveal the text underneath */
+  }
+
 </style>
 
 <div class="checkout-wrapper" id="loading-screen">
   <div class="loader"></div>
   <div class="loading-text">
-    Securing your (BLEEPED)...<br>
+    Securing your <span class="redacted">BLEEPED</span> ... <br>
     <span style="font-size: 0.8em; color: #999;">Establishing encrypted connection</span>
   </div>
 </div>
