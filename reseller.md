@@ -115,7 +115,7 @@ permalink: /reseller/
 
 <div class="container">
   <div class="image-gallery">
-    <img src="../assets/images/IMG_0251.jpg" alt="The (BLEEPED)" class="product-image">
+    <img src="../assets/images/fuggler.jpg" alt="The (BLEEPED)" class="product-image">
   </div>
   
   <div class="product-info">
