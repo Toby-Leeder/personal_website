@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-Hi, I’m Toby, a student at UC Berkeley studying Applied Mathematics and Data Science. When I’m not wrangling numbers, you’ll probably find me on stage. This past summer I performed in a musical: The Prom! At UC Berkeley you’ll find me managing both the stage and the finances at BareStage Productions. 
+Hi, I’m Toby, a student at UC Berkeley studying Computer Science and Applied Mathematics. When I’m not wrangling numbers, you’ll probably find me on stage. This past summer I performed in a musical: The Prom! At UC Berkeley you’ll find me managing both the stage and the finances at BareStage Productions. 
 
 I grew up in sunny San Diego with my twin brother and younger brother, but I’ve been lucky enough to travel far beyond–15 countries so far, with Thailand as the all-time favorite.
 
