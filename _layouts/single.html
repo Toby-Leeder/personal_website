@@ -61,6 +61,7 @@ layout: default
             {% endfor %}
             </ul>
         </div>
+        {% endif %}
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -86,10 +87,6 @@ layout: default
       {% endif %}
     {% endif %}
   </article>
-
-
-{% endif %}
-
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}

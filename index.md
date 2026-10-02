@@ -5,7 +5,6 @@ excerpt: "Software engineering projects, notes, and résumé"
 header:
   overlay_color: "#000"
   overlay_filter: 0.4
-  overlay_image: /assets/images/project-demo.gif
   actions:
     - label: "View Projects"
       url: "/projects/"

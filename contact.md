@@ -5,10 +5,6 @@ permalink: /contact/
 author_profile: false
 ---
 
-
-- Email: [you@tobyleeder.com](mailto:you@tobyleeder.com)
+- Email: [tobyleeder@berkeley.edu](mailto:tobyleeder@berkeley.edu)
 - GitHub: [Toby-Leeder](https://github.com/Toby-Leeder)
-- LinkedIn: Add your handle
-
-
-> You can add a Netlify/Formspark form later; for now, keep it simple and reliable.
+- LinkedIn: [toby-leeder](https://www.linkedin.com/in/toby-leeder/)

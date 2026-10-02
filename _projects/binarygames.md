@@ -16,7 +16,6 @@ links:
 header:
   overlay_color: "#000"
   overlay_filter: 0.3
-  overlay_image: /assets/images/binarygames-hero.gif             # ← add a GIF/screenshot
 ---
 
 ## Problem
