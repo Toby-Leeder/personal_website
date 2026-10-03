@@ -35,8 +35,25 @@ defaults:
       type: "projects"
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       toc: true
+      toc_sticky: true
+
+author:
+  name: "Toby Leeder"
+  avatar: "/assets/images/headshot.jpg"
+  bio: "CS + Applied Math at UC Berkeley. Full-stack developer."
+  location: "Berkeley, CA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Toby-Leeder"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/toby-leeder/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:tobyleeder@berkeley.edu"
 
 permalink: pretty
 markdown: kramdown

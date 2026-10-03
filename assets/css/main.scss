@@ -1,31 +1,288 @@
 ---
 ---
 
+/* ==========================================================================
+   Ink skin — variables set before the theme import so they win over the
+   theme's `!default` values.
+   ========================================================================== */
+
+$paper: #ffffff;
+$soft: #f3f2f7;
+$ink: #17151f;
+$acc: #ff5c1a;
+$dim: #5b5868;
+$rule: #dad8e3;
+
+$sans-serif: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$sans-serif-narrow: $sans-serif;
+$header-font-family: "Bricolage Grotesque", $sans-serif;
+$global-font-family: $sans-serif;
+$caption-font-family: $sans-serif;
+$monospace: "JetBrains Mono", Menlo, Consolas, monospace;
+
+$background-color: $paper;
+$text-color: $ink;
+$muted-text-color: $dim;
+$border-color: $rule;
+$footer-background-color: $paper;
+$code-background-color: $soft;
+$code-background-color-dark: $soft;
+$form-background-color: $soft;
+
+$primary-color: $ink;
+$info-color: $acc;
+$link-color: $acc;
+$link-color-hover: mix(#000, $acc, 20%);
+$link-color-visited: $acc;
+$masthead-link-color: $ink;
+$masthead-link-color-hover: $acc;
+$focus-color: $acc;
+
+$border-radius: 10px;
+$box-shadow: none;
+$doc-font-size: 17;
+
 @import "minimal-mistakes";
 
-/* === your overrides go below === */
+/* ==========================================================================
+   Overrides
+   ========================================================================== */
 
-/* Make hero body text (not the H1) white */
-.page__hero--overlay .wrapper,
-.page__hero--overlay .wrapper * {
-  color: #fff !important;
+$shadow-ink: 3px 3px 0 $ink;
+
+html, body { overflow-x: hidden; }
+body { -webkit-font-smoothing: antialiased; }
+.home { min-width: 0; }
+.home__hero > div { min-width: 0; }
+
+h1, h2, h3, h4 { letter-spacing: -0.01em; }
+
+.mono { font-family: $monospace; }
+
+/* Masthead ------------------------------------------------------------- */
+.masthead {
+  border-bottom: 2px solid $ink;
+  &__inner-wrap { padding: 0.9em 1em; }
+}
+.site-title {
+  font-family: $header-font-family;
+  font-weight: 800;
+  font-size: 1.2em;
+  letter-spacing: -0.01em;
+}
+.greedy-nav {
+  background: $paper;
+  a { font-weight: 600; }
+  .visible-links a::before { background: $acc; height: 3px; }
+  .visible-links li:last-child a {
+    margin-left: 0.5em;
+    padding: 0.35em 0.9em;
+    background: $ink;
+    color: $paper;
+    border-radius: 8px;
+    &::before { display: none; }
+    &:hover { background: $acc; color: $ink; }
+  }
+  .greedy-nav__toggle { background: $paper; }
+  .navicon, .navicon::before, .navicon::after { background: $ink; }
 }
 
-/* Optional: distinct color for the small lead line only */
-.page__hero--overlay .page__lead {
-  color: #eaeaea !important;
+/* Buttons --------------------------------------------------------------- */
+.btn {
+  font-family: $sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  padding: 0.65em 1.1em;
+  border: 2px solid $ink;
+  border-radius: $border-radius;
+  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+
+  &--primary {
+    background: $ink;
+    color: $paper;
+    &:visited { background: $ink; color: $paper; }
+    &:hover { background: $acc; color: $ink; }
+  }
+  &--inverse, &--outline {
+    background: $paper;
+    color: $ink;
+    box-shadow: $shadow-ink;
+    &:visited { background: $paper; color: $ink; }
+    &:hover { background: $soft; color: $ink; transform: translate(1px, 1px); box-shadow: 2px 2px 0 $ink; }
+  }
+  &--light-outline {
+    border-color: $paper;
+    &:hover { background: $paper; color: $ink; }
+  }
 }
 
-/* Optional blur of the background image behind the text */
-.page__hero--overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* this blurs what's behind the pseudo-element */
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  /* keep it subtle if you want a tint too */
-  background: rgba(0,0,0,0.15);
-  z-index: 0;   /* sits under the text */
+/* Page titles ----------------------------------------------------------- */
+.page__title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 2.2em;
+  line-height: 1.05;
+  a { color: inherit; text-decoration: none; }
 }
-.page__hero--overlay .wrapper { position: relative; z-index: 1; }
+.page__content {
+  h2 { font-weight: 800; border-bottom: 2px solid $ink; padding-bottom: 0.3em; }
+  h3 { font-weight: 700; }
+  a { text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  code { font-family: $monospace; font-size: 0.85em; }
+}
+.page__meta, .page__date { font-family: $monospace; font-size: 0.75em; }
+
+/* Hero (project pages) -------------------------------------------------- */
+.page__hero--overlay {
+  .page__title { font-weight: 800; letter-spacing: -0.02em; }
+  .wrapper, .wrapper * { color: #fff; }
+  .page__lead { color: #eaeaea; }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0;
+  }
+  .wrapper { position: relative; z-index: 1; }
+}
+
+/* Links block on project pages ----------------------------------------- */
+.page__links {
+  margin-top: 2em;
+  h2 { font-size: 0.8em; font-family: $monospace; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border: 0; color: $dim; }
+  .btns { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5em; }
+  .btn { @extend .btn--inverse; }
+}
+
+/* Cards (project grid, feature rows) ----------------------------------- */
+.grid__item, .feature__item, .feature__item--left, .feature__item--right, .feature__item--center {
+  .archive__item {
+    border: 2px solid $ink;
+    border-radius: 12px;
+    overflow: hidden;
+    background: $paper;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    &:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 $ink; }
+  }
+  .archive__item-teaser { border-radius: 0; border-bottom: 2px solid $ink; margin: 0; img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; } }
+  .archive__item-title { margin: 0.7em 0.8em 0.2em; font-weight: 700; font-size: 1.05em; }
+  .archive__item-excerpt { margin: 0 0.8em 0.9em; font-size: 0.85em; color: $dim; }
+  .page__meta { margin: 0 0.8em; }
+}
+.archive__item-title a { color: $ink; text-decoration: none; &:hover { color: $acc; } }
+
+/* Tech tags ------------------------------------------------------------- */
+.tech {
+  display: flex; flex-wrap: wrap; gap: 0.35em; margin: 0.6em 0 0; padding: 0; list-style: none;
+  li, span {
+    font-family: $monospace; font-size: 0.68em; font-weight: 500;
+    padding: 0.15em 0.55em; border-radius: 5px;
+    background: $soft; border: 1px solid $rule; color: $ink;
+  }
+}
+.grid__item .tech { margin: 0 0.9em 1em; }
+
+/* Card grid (homepage + projects page) --------------------------------- */
+.cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2em;
+  @include breakpoint(max-width $medium) { grid-template-columns: 1fr; }
+  &--2 { grid-template-columns: repeat(2, 1fr); @include breakpoint(max-width $medium) { grid-template-columns: 1fr; } }
+}
+.card {
+  border: 2px solid $ink; border-radius: 12px; overflow: hidden; background: $paper;
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  &:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 $ink; color: inherit; }
+  img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 2px solid $ink; }
+  &__placeholder { aspect-ratio: 16 / 10; background: $soft; border-bottom: 2px solid $ink; display: grid; place-items: center; font-family: $monospace; font-size: 0.8em; color: $dim; }
+  > div { padding: 0.8em 0.9em 1em; }
+  h3 { font-family: $header-font-family; font-weight: 700; font-size: 1.05em; margin: 0 0 0.25em; }
+  p { font-size: 0.85em; color: $dim; margin: 0; }
+  .page__content & h3 { margin-top: 0; }
+}
+.page__content .cards { margin-top: 1.5em; }
+
+/* Homepage -------------------------------------------------------------- */
+.home {
+  max-width: $x-large;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2em;
+    align-items: center;
+    padding: 3em 0 2.25em;
+    @include breakpoint(max-width $medium) { grid-template-columns: 1fr; padding-top: 2em; }
+  }
+  &__eyebrow {
+    font-family: $monospace; font-size: 0.78em; font-weight: 600; color: $acc; margin: 0 0 0.9em; letter-spacing: 0.01em;
+    @include breakpoint(max-width $small) { font-size: 0.7em; }
+  }
+  &__title {
+    font-family: $header-font-family; font-weight: 800;
+    font-size: clamp(2.4em, 5.5vw, 3.6em); line-height: 1; letter-spacing: -0.02em; margin: 0 0 0.4em;
+    u { text-decoration: none; border-bottom: 0.14em solid $acc; line-height: 0.9; }
+  }
+  &__lead { font-size: 1.1em; color: $dim; max-width: 48ch; margin: 0 0 1.2em; }
+  &__actions { display: flex; flex-wrap: wrap; gap: 0.6em; align-items: center; .btn { margin: 0; } }
+  &__quick {
+    margin-left: 0.4em; flex-basis: 100%;
+    @include breakpoint($medium) { flex-basis: auto; } font-family: $monospace; font-size: 0.78em; color: $dim;
+    a { color: $dim; text-decoration: none; &:hover { color: $acc; } }
+  }
+  &__photo {
+    justify-self: center;
+    img { width: 220px; max-width: 100%; border: 2px solid $ink; border-radius: 14px; box-shadow: 7px 7px 0 $acc; display: block; }
+    @include breakpoint(max-width $medium) { order: -1; img { width: 150px; } }
+  }
+
+  &__stack {
+    display: flex; flex-wrap: wrap; gap: 0.5em; align-items: center; padding: 0 0 2.5em; margin: 0; list-style: none;
+    li { font-family: $monospace; font-size: 0.8em; font-weight: 500; padding: 0.3em 0.7em; border: 1.5px solid $ink; border-radius: 6px; background: $soft; }
+    li.label { font-size: 0.72em; color: $dim; margin-right: 0.4em; letter-spacing: 0.06em; border: 0; background: none; padding: 0; }
+  }
+
+  &__section { padding-bottom: 2.5em; }
+  &__section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2px solid $ink; padding-bottom: 0.4em; margin-bottom: 1.2em;
+    h2 { font-family: $header-font-family; font-weight: 800; font-size: 1.5em; margin: 0; letter-spacing: -0.01em; }
+    a { font-family: $monospace; font-size: 0.78em; font-weight: 600; color: $acc; text-decoration: none; &:hover { text-decoration: underline; } }
+  }
+
+
+  &__two {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em;
+    @include breakpoint(max-width $medium) { grid-template-columns: 1fr; }
+  }
+  &__list {
+    list-style: none; margin: 0; padding: 0;
+    li { display: flex; justify-content: space-between; gap: 1em; padding: 0.6em 0; border-bottom: 1px solid $rule; font-size: 0.95em; }
+    a { color: $ink; font-weight: 600; text-decoration: none; &:hover { color: $acc; } }
+    time { font-family: $monospace; font-size: 0.72em; color: $dim; white-space: nowrap; }
+  }
+  &__aside {
+    background: $soft; border-radius: 12px; padding: 1em 1.1em; font-size: 0.95em; color: $dim;
+    b { color: $ink; }
+    a { color: $acc; font-weight: 600; }
+  }
+}
+
+/* Footer ---------------------------------------------------------------- */
+.page__footer {
+  border-top: 2px solid $ink;
+  margin-top: 2em;
+  footer { margin-top: 1.2em; padding-bottom: 1.2em; font-family: $monospace; font-size: 0.78em; }
+  .page__footer-follow { display: none; }
+  .page__footer-copyright { margin: 0; }
+}
+
+/* Reduced motion -------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .card, .archive__item { transition: none; }
+}

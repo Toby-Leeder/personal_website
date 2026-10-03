@@ -1,7 +1,10 @@
 ---
+featured: false
+weight: 4
 title: "BinaryGames"
 date: 2025-09-19
 summary: "A paired frontend + backend project demonstrating full‑stack architecture, auth, and deployment workflow."
+excerpt: "A paired frontend + backend project demonstrating full‑stack architecture, auth, and deployment workflow."
 tech: [JavaScript, React, Node.js, Express, REST, JSON, GitHub Actions]
 role: "Full‑stack developer"
 layout: single

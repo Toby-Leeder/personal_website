@@ -1,7 +1,11 @@
 ---
+featured: true
+weight: 2
+teaser: /assets/images/leedingtomorrow-front.png
 title: "Leeding Tomorrow – Website Design & Build"
 date: 2025-09-22
 summary: "A clean, conversion-focused site for an educator offering College Coaching and Future Problem Solving programs."
+excerpt: "A clean, conversion-focused site for an educator offering College Coaching and Future Problem Solving programs."
 tech: [Web, HTML, CSS, UX, Calendly, Static Site]
 role: "Designer & Developer"
 links:
