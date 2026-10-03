@@ -6,8 +6,8 @@ title: "Classroom Jukebox"
 date: 2025-09-19
 summary: "Collaborative music queue for classrooms — combined frontend and backend contributions."
 excerpt: "Collaborative music queue for classrooms — combined frontend and backend contributions."
-tech: [JavaScript, React, Node.js, Express, REST, OAuth, GitHub]
-role: "Contributor (frontend + backend)"
+tech: [Java, Spring, SQLite, WebSocket, JavaScript]
+role: "Full-stack developer, Scrum Master"
 layout: single
 links:
   - label: "Frontend Repository"

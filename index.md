@@ -12,7 +12,7 @@ excerpt: "Computer Science and Applied Math at UC Berkeley. Full-stack projects,
     <div>
       <p class="home__eyebrow">CS + Applied Math · UC Berkeley · Open to SWE internships</p>
       <h1 class="home__title">I build <u>software</u><br>end to end.</h1>
-      <p class="home__lead">Full-stack apps, data pipelines, and the occasional game. I like owning a feature from the schema to the UI and shipping it.</p>
+      <p class="home__lead">Full-stack and mobile apps, internal tools, and the occasional game. I like owning a feature from the schema to the UI and shipping it.</p>
       <div class="home__actions">
         <a class="btn btn--primary" href="/projects/">View projects</a>
         <a class="btn btn--inverse" href="/assets/resume.pdf">Résumé (PDF)</a>
@@ -57,7 +57,7 @@ excerpt: "Computer Science and Applied Math at UC Berkeley. Full-stack projects,
       </div>
       <div>
         <div class="home__section-head"><h2>Off the clock</h2><a href="/about/">about →</a></div>
-        <div class="home__aside"><b>Teaching a computer science course at UC Berkeley this semester.</b> Directed a short film last spring, performed in The Prom in summer 2025, and I've been to 15 countries. The child-actor story is on the <a href="/about/">About page</a>.</div>
+        <div class="home__aside"><b>Tutoring CS 61A at UC Berkeley.</b> Directing a short film with the Business and Film Association, performed in The Prom in summer 2025, and I've been to 15 countries. The child-actor story is on the <a href="/about/">About page</a>.</div>
       </div>
     </div>
   </section>

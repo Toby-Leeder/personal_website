@@ -42,7 +42,7 @@ defaults:
 author:
   name: "Toby Leeder"
   avatar: "/assets/images/headshot.jpg"
-  bio: "CS + Applied Math at UC Berkeley. Full-stack developer."
+  bio: "CS + Applied Math at UC Berkeley. Full-stack and mobile developer."
   location: "Berkeley, CA"
   links:
     - label: "GitHub"

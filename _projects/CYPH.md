@@ -6,8 +6,8 @@ title: "Can You Picture Heaven (CYPH)"
 date: 2025-09-19
 summary: "Exploratory/creative tech project blending media and interaction."
 excerpt: "Exploratory/creative tech project blending media and interaction."
-tech: [Python, JS, Web, Media, Creative Tech]
-role: "Contributor / Developer"
+tech: [Unity, C#, Game design]
+role: "Level designer / developer"
 links:
   - label: "Repository"
     url: "https://github.com/lefortune/CYPH"
