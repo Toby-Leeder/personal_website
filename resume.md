@@ -13,8 +13,6 @@ excerpt: "Education, experience, and skills. PDF available for download."
   <span class="home__quick"><a href="https://www.linkedin.com/in/toby-leeder/">linkedin</a> · <a href="https://github.com/Toby-Leeder">github</a></span>
 </p>
 
-<div class="resume__embed">
-  <object data="/assets/resume.pdf#toolbar=0&navpanes=0" type="application/pdf" aria-label="Toby Leeder résumé">
-    <p>Your browser can't display the PDF inline. <a href="/assets/resume.pdf">Download it instead.</a></p>
-  </object>
-</div>
+<a class="resume__preview" href="/assets/resume.pdf" aria-label="Open the résumé PDF">
+  <img src="/assets/images/resume-preview.jpg" alt="Preview of Toby Leeder's one-page résumé" width="1236" height="1600" loading="lazy">
+</a>
