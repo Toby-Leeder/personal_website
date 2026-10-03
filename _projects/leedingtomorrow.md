@@ -1,6 +1,6 @@
 ---
 featured: true
-weight: 2
+weight: 3
 teaser: /assets/images/leedingtomorrow-front.png
 title: "Leeding Tomorrow – Website Design & Build"
 date: 2025-09-22

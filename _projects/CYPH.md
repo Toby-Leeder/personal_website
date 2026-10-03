@@ -1,6 +1,6 @@
 ---
 featured: true
-weight: 3
+weight: 1
 teaser: /assets/images/cyph-hero.png
 title: "Can You Picture Heaven (CYPH)"
 date: 2025-09-19

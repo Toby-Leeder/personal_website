@@ -1,6 +1,6 @@
 ---
 featured: true
-weight: 1
+weight: 2
 teaser: /assets/images/classroomjukebox.png
 title: "Classroom Jukebox"
 date: 2025-09-19
