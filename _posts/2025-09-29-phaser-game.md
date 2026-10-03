@@ -7,29 +7,32 @@ excerpt: "This was the game I created over the summer in High School to learn ho
 
 
 <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
-<style type="text/css">
-    body {
-        margin: 0;
-    }
-    canvas {
-        padding: 0;
-        margin: auto;
-        display: block;
-        width: 800px;
-        height: 600px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
+<style>
+  .game-frame {
+    border: 2px solid #17151f;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #17151f;
+    margin: 1em 0 1.5em;
+    aspect-ratio: 4 / 3;
+  }
+  .game-frame canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
 </style>
+
+Arrow keys to move, up to jump. Collect the stars and dodge the bombs.
+{: .notice}
+
+<div class="game-frame" id="game-container"></div>
 
 <script type="text/javascript">
     // configuration for the phaser game. Try changing width, height, gravity, etc, to see what happends and look into the documention for more info. 
     var config = {
         type: Phaser.AUTO,
+        parent: 'game-container',
         width: 800,
         height: 600,
         physics: {
