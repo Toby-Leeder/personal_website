@@ -19,10 +19,20 @@ My leadership style is consensus-driven. I always try to ask others for their in
 
 I carry that mindset into everything I do. Some people will always know more than me, so I learn from them while still bringing my own thoughts to the table.
 
-### Stress
+### Handling stress
 
 Being on set is constant crunch time. There are always tight deadlines and you are always running late. These are the environments I thrive in. I kept track of our shot list and schedule while overseeing creative decisions for the actors, the cinematography, and the lighting.
 
 ### Communication
 
 With 20 people on set, clear lines of communication between my producers, actors, assistant director, and everyone else were essential. I kept a central group chat going, but I also reached out to people directly and often. Instead of leaving them to report back on their own, asking them directly was a friendly way to remind and encourage them to stay in touch without putting too much pressure on anyone.
+
+## What I'd do differently
+
+### Watching my scenes
+
+One thing I struggled with was making time to watch the scenes as we filmed them, so I could give feedback on lighting, acting, and cinematography. Often my director of photography was right at the camera watching the shot, and we didn't have a secondary screen. The broader struggle was pushing for myself to have a spot to view our shots instead of taking a back seat. I trusted the people around me, but I also needed to step further into my role as director.
+
+### Getting involved earlier
+
+Another improvement for next time is deeper involvement earlier in the process. Our club deliberately separates pre-production from production to avoid overbearing directors controlling everything, but I know I would never be that kind of director. I should have been more involved in planning, writing, costuming, and location scouting so that my vision stayed coherent across the whole project.
