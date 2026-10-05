@@ -1,48 +1,41 @@
 ---
 featured: false
 weight: 4
-title: "BinaryGames"
-date: 2025-09-19
-summary: "A paired frontend + backend project demonstrating full‑stack architecture, auth, and deployment workflow."
-excerpt: "A paired frontend + backend project demonstrating full‑stack architecture, auth, and deployment workflow."
-tech: [JavaScript, React, Node.js, Express, REST, JSON, GitHub Actions]
-role: "Full‑stack developer"
+title: "Binary Games"
+date: 2024-05-01
+summary: "A virtual escape room of computer science puzzles with accounts and a speedrun leaderboard, built for AP Computer Science Principles."
+excerpt: "A virtual escape room of computer science puzzles with accounts and a speedrun leaderboard, built for AP Computer Science Principles."
+teaser: /assets/images/binarygames.jpg
+tech: [JavaScript, HTML, CSS, Python, Flask, Docker]
+role: "Full-stack developer"
 layout: single
 permalink: /projects/binarygames/
 links:
+  - label: "Live Site"
+    url: "https://toby-leeder.github.io/binarygames-frontend"
   - label: "Frontend Code"
-    url: "https://github.com/Toby-Leeder/binarygames-frontend"   # ← update if different
+    url: "https://github.com/Toby-Leeder/binarygames-frontend"
   - label: "Backend Code"
-    url: "https://github.com/Toby-Leeder/binarygames-backend"    # ← update if different
-  # - label: "Live Demo"
-  #   url: "https://example.com"                                  # optional
+    url: "https://github.com/Toby-Leeder/binarygames-backend"
 header:
   overlay_color: "#000"
-  overlay_filter: 0.3
+  overlay_filter: 0.5
+  overlay_image: /assets/images/binarygames.jpg
 ---
 
-## Problem
-Briefly describe the user problem or motivation. For example: a learning tool with interactive challenges that visualize binary/bitwise operations.
+## What it is
 
-## Approach
-- **Frontend:** React SPA, router, state management, API client, reusable components.
-- **Backend:** Node/Express REST API, routes, data validation, error handling.
-- **Integration:** Auth/session (if applicable), request/response contracts, CORS, and CI.
+Binary Games is a virtual escape room built by Team JCK for AP Computer Science Principles. Players create an account, then work through a series of computer science themed puzzles to escape the room. A leaderboard tracks speedrun times, and each game can also be played on its own.
 
-## Architecture (high‑level)
-[React UI] ⇄ [API Client] ⇄ (HTTPS) ⇄ [Express Routes] → [Controller] → [Model/Storage]
+## The games
 
+- **Binary Racer:** a reaction game around reading binary quickly.
+- **Pipes:** route the flow by picking the right operators.
+- **Logic and Logic Gates:** evaluate boolean expressions and gate diagrams.
+- **RGB Guesser:** match a color to its hex and RGB values.
+- **Bomb Defusal:** decode Base64 before the timer runs out.
 
-## Results
-- Key outcomes (latency targets, features delivered, tests covered).
-- Screenshots or a short GIF of core flows (challenge view, scoreboard, etc.).
+## How it's built
 
-## Responsibilities
-- Implemented X feature end‑to‑end (component ↔ API).
-- Wrote unit/integration tests for Y modules.
-- Set up CI/CD (GitHub Actions) and deployment scripts (if applicable).
-
-## Next Steps
-Add persistence (Postgres/Mongo), OAuth login, or real‑time updates with websockets.
-
-> **Tip:** Drop images at `/assets/images/` and update the `overlay_image` above.
+- **Frontend:** static HTML, CSS, and JavaScript, hosted on GitHub Pages.
+- **Backend:** a Python Flask API with user accounts and leaderboard storage, containerized with Docker.
